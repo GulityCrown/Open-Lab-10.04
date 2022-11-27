@@ -10,6 +10,7 @@ namespace Open_Lab_10._04
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("si teplý ");
         }
     }
 }
