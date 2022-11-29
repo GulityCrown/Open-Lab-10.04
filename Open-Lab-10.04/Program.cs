@@ -10,7 +10,19 @@ namespace Open_Lab_10._04
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("si teplý ");
+            Book LOTR2 = new Book();
+            /*LOTR.Title = "Lord Of The Rings";
+            LOTR.Author = "J.J.R.Tolkien";
+            LOTR.Category = "epic high-fantasy novel";
+            LOTR.Pages = 1172;
+            LOTR.RelaseDate = "29th July 1954";*/
+            Book LOTR3 = new Book("Lord of the Rings 3", 512);
+            LOTR2.Vypis();
+            Book HOBBIT = new Book("Hobbit", 310, "juvenile fantasy", "J.R.R.Tolkien", "21. septembra 1937");
+            LOTR3.Vypis();
+
+
+            HOBBIT.Vypis();
         }
     }
 }
