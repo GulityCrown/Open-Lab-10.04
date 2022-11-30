@@ -22,27 +22,27 @@ namespace Open_Lab_10._04
         public int Pages { get; set; }
         public Book()
         {
-            this.title = "-1";
-            this.category = "-1";
-            this.author = "-1";
-            this.relaseDate = "-1";
-            this.pages = -1;
+            Title = "-1";
+            Category = "-1";
+            Author = "-1";
+            RelaseDate = "-1";
+            Pages = -1;
         }
         public Book(string xTitle, int xPages)
         {
-            this.title = xTitle;
-            this.category = "-1";
-            this.author = "-1";
-            this.relaseDate = "-1";
-            this.pages = xPages;
+            Title = xTitle;
+            Category = "-1";
+            Author = "-1";
+            RelaseDate = "-1";
+            Pages = xPages;
         }
         public Book(string xTitle, int xPages, string xCategory, string xAuthor, string xRelaseDate)
         {
-            this.title = xTitle;
-            this.category = xCategory;
-            this.author = xAuthor;
-            this.relaseDate = xRelaseDate;
-            this.pages = xPages;
+            Title = xTitle;
+            Category = xCategory;
+            Author = xAuthor;
+            RelaseDate = xRelaseDate;
+            Pages = xPages;
         }
 
 
@@ -50,11 +50,11 @@ namespace Open_Lab_10._04
         public void Vypis()
         {
             Console.WriteLine();
-            Console.WriteLine("Category: " + category);
-            Console.WriteLine("Author: " + author);
-            Console.WriteLine("Title: " + title);
-            Console.WriteLine("Relase date: " + relaseDate);
-            Console.WriteLine("number of pages: " + pages);
+            Console.WriteLine("Category: " + Category);
+            Console.WriteLine("Author: " + Author);
+            Console.WriteLine("Title: " + Title);
+            Console.WriteLine("Relase date: " + RelaseDate);
+            Console.WriteLine("number of pages: " + Pages);
             Console.WriteLine();
         }
     }
