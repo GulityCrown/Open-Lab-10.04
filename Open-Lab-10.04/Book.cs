@@ -10,39 +10,70 @@ namespace Open_Lab_10._04
 {
     internal class Book
     {
+       
         private string title;
         private string category;
         private string author;
-        private string relaseDate;
+        private int relaseDate;
         private int pages;
-        public string Title { get; set; }
-        public string Category { get; set; }
-        public string Author { get; set; }
-        public string RelaseDate { get; set; }
-        public int Pages { get; set; }
+        public string Title { get { return title; } set { title = value; } }
+        public string Category
+        {
+            get { return category; }
+            set { category = value; }
+        }
+        public string Author
+        {
+            get { return author; }
+            set { author = value; }
+        }
+        public int RelaseDate
+        {
+            get => relaseDate;
+            set
+            {
+                if ((value >= 2021) || (value <= 1450))
+                {
+                    relaseDate = -1;
+                }
+                else
+                {
+                    relaseDate = value;
+                }
+            }
+
+        }
+        public int Pages
+        {
+            get { return pages; }
+            set
+            {
+                pages = value;
+            }
+        }
         public Book()
         {
-            Title = "-1";
-            Category = "-1";
-            Author = "-1";
-            RelaseDate = "-1";
-            Pages = -1;
+            title = "-1";
+            category = "-1";
+            author = "-1";
+            relaseDate = -1;
+            pages = -1;
         }
         public Book(string xTitle, int xPages)
         {
-            Title = xTitle;
-            Category = "-1";
-            Author = "-1";
-            RelaseDate = "-1";
-            Pages = xPages;
+            this.title = xTitle;
+            this.category = "-1";
+            this.author = "-1";
+            this.relaseDate = -1;
+            this.pages = xPages;
         }
-        public Book(string xTitle, int xPages, string xCategory, string xAuthor, string xRelaseDate)
+        public Book(string xTitle, int xPages, string xCategory, string xAuthor, int xRelaseDate)
         {
-            Title = xTitle;
-            Category = xCategory;
-            Author = xAuthor;
-            RelaseDate = xRelaseDate;
-            Pages = xPages;
+            title = xTitle;
+            category = xCategory;
+            author = xAuthor;
+            relaseDate = xRelaseDate;
+            pages = xPages;
         }
 
 
@@ -50,11 +81,11 @@ namespace Open_Lab_10._04
         public void Vypis()
         {
             Console.WriteLine();
-            Console.WriteLine("Category: " + Category);
-            Console.WriteLine("Author: " + Author);
-            Console.WriteLine("Title: " + Title);
-            Console.WriteLine("Relase date: " + RelaseDate);
-            Console.WriteLine("number of pages: " + Pages);
+            Console.WriteLine("Category: " + category);
+            Console.WriteLine("Author: " + author);
+            Console.WriteLine("Title: " + title);
+            Console.WriteLine("Relase date: " + relaseDate);
+            Console.WriteLine("number of pages: " + pages);
             Console.WriteLine();
         }
     }
